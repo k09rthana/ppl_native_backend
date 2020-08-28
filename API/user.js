@@ -8,7 +8,5 @@ module.exports={
             reject("User Already Exists");
         })
     },
-    f2=()=>{
-        
-    }
+    
 }
