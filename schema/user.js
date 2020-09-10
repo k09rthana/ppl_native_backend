@@ -14,4 +14,4 @@ var blogSchema = new Schema(
   { versionKey: false }
 );
 
-module.exports = mongoose.model("myCollection", blogSchema);
+module.exports = mongoose.model("mycol", blogSchema);

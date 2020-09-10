@@ -30,11 +30,14 @@ mongoose.connect(
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err, result) => {
     if (result) console.log("connected to Database successfully");
+    else {
+      console.log(err);
+    }
   }
 );
-app.use("/", (req, res) => {
-  res.send("server working");
-});
+// app.use("/", (req, res) => {
+//   res.send("server working");
+// });
 app.use("/auth", AuthRouter);
 
 // app.use("/timelineRouter", TimelineRouter);
