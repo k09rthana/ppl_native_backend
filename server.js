@@ -27,6 +27,7 @@ app.use(
 
 mongoose.connect(
   "mongodb://localhost:27017/ppl",
+
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err, result) => {
     if (result) console.log("connected to Database successfully");

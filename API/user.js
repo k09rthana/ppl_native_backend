@@ -35,9 +35,13 @@ module.exports = {
         { username, password, email, firstName, lastName },
         (err, data) => {
           if (data) {
-            resolve(data);
+            console.log("data entered");
+            let { username, password, email, firstName, lastName } = result;
+
+            resolve(result);
             console.log(data);
           } else {
+            ("data not entered");
             reject();
           }
         }
@@ -46,12 +50,18 @@ module.exports = {
   },
 
   userLogin: (email, password) => {
+    console.log("api userLogin");
     return new Promise((resolve, reject) => {
       db.findOne({ email, password }, (err, result) => {
-        if (result) {
+        if (result != 0) {
+          console.log("if of findOne");
           let { _id, username, firstName, lastName, email } = result;
-          resolve({ _id, username, firstName, lastName, email });
+          //send("Loggedin");
+
+          resolve(result);
         } else {
+          console.log("else of findOne");
+
           reject();
         }
       });

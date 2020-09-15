@@ -8,7 +8,7 @@ var cors = require("cors");
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 mongoose.connect(
-  "mongodb://localhost:27017/datbasename",
+  "mongodb://localhost:27017/ppl",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
