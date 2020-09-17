@@ -1,6 +1,6 @@
 var express = require("express");
 const router = express.Router();
-const api = require("../API/user");
+const api = require("../api/user");
 // router.get("/", (req, res) => {
 //   res.send("auth router working");
 // });
