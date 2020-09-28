@@ -8,7 +8,7 @@ module.exports = {
         if (data) {
           console.log("data entered");
 
-          resolve(result);
+          resolve(data);
           console.log(data);
         } else {
           ("data not entered");

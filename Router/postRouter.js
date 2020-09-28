@@ -17,14 +17,14 @@ router.get("/", (req, res) => {
 });
 router.post("/create", upload.single("image"), async (req, res) => {
   try {
-    console.log("try of /create");
+    console.log("try of create");
 
     console.log(req.file.filename);
     req.body["image"] = req.file.filename;
     let data = await api.addPost(req.body);
     res.send(data);
   } catch (err) {
-    console.log("error ", err);
+    console.log("error in postRouter", err);
     res.send("Error");
   }
 });

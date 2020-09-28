@@ -34,6 +34,7 @@ mongoose.connect(
   (err, result) => {
     if (result) console.log("connected to Database successfully");
     else {
+      console.log("not connected to db");
       console.log(err);
     }
   }
