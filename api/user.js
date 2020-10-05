@@ -55,7 +55,7 @@ module.exports = {
       db.findOne({ email, password }, (err, result) => {
         if (result != 0) {
           console.log("if of findOne");
-          let { _id, username, firstName, lastName, email } = result;
+          let { username, firstName, lastName, email } = result;
           //send("Loggedin");
 
           resolve(result);
